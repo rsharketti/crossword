@@ -1,5 +1,5 @@
 // JavaScript Document
-
+new Array("business", "criminaljustice", "hospitality", "culinary", "hvac", "welding", "nursing", "graphic", "multimedia", "cad", "massage", "programming", "electronics");
 
 onload = init;
 
@@ -21,6 +21,8 @@ function userClick(){}
 function makeSelection(){
 		
 }
+
+$("#aDiv").wordsearchwidget({"wordlist" : randi, "gridsize" : 12});
 
 
 

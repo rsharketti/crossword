@@ -3,244 +3,50 @@
 <head>
 <meta charset="utf-8">
 <title>PTI Word Search</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+        <script type="text/javascript" src="js/jquery.wordsearchgame.js"></script>
+       <script src="js/jquery.ui.touch-punch.min.js"></script>
+        <link  rel="stylesheet" type="text/css" href="css/jquery.wordsearchgame.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <script src="js/script.js"></script>
 
+ <script>
+		$(document).ready( function () {			var words = "business,hospitality,culinary,HVAC,Welding,Nursing,Graphics,Multimedia,CAD,Massage,Programming,Electronics";
+			
+			//attach the game to a div
+			$("#theGrid").wordsearchwidget({"wordlist" : words,"gridsize" : 16});
 
+		});
+
+    
+        </script>
 
 </head>
 
 <body class="clearfix">
 
-
-<!--<div>
-<style>
-.gameboard{ border:3px #eef solid; }
-.gameboard td{ 
-  font-family:arial, sans-serif; font-size:15pt; font-weight:bold; 
-  text-align:center; vertical-align:middle; color:#933; 
-  background:#ffe; padding:8px; margin:2px; border:2px #eef solid; 
-}
-td.gameboard_over{ color:#fff; background:#000; }
-td.gameboard_clicked{ color:#000; background:#ddd; }
-</style>
-
-<div id="game"></div>
-<form onsubmit="return false">
-<input type="button" value="Reset" onclick="main();">
-</form>
-
-<script type="text/javascript"><!--
-function getRandomLetter(){
-  var data = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  var rnd = parseInt(Math.random()*data.length)
-  return data.charAt(rnd);
-}
-
-function hMouseOver(obj){
-  if(obj.className.match(/clicked/)) return
-  if(!obj.orgClassName) obj.orgClassName = obj.className; 
-  obj.className = 'gameboard_over'
-}
-
-function hMouseOut(obj){
-  if(obj.className.match(/clicked/)) return
-  obj.className = obj.orgClassName
-}
-
-function hMouseClick(obj){
-  obj.className = 'gameboard_clicked'
-}
-
-function createBoard(x,y){
-  var html = '<table border="0" cellpadding="0" cellspacing="0" class="gameboard">'
-
-    for(var i=0; i<y; i++){
-      html += '<tr>'
-
-        for(var j=0; j<x; j++){
-          html += '<td onmouseover="hMouseOver(this);" onmouseout="hMouseOut(this);" onclick="hMouseClick(this);">'
-          html += getRandomLetter()
-          html += '</td>'
-        }
-
-      html += '</tr>'
-    }
-
-  html += '</table>'
-
-  return html
-}
-
-function main(){
-  var obj = document.getElementById('game');
-  obj.innerHTML = createBoard(10,10);
-}
-
-main();
-//</script>
-</div>-->
-
-
-
-
-
 <h1>PTI Word Search</h1>
 <p>When you find a word select over that word and it will be marked as found, then move on to the next! </p>
 
 
+<div id="theGrid">
 
-<table>
-     <tr>
-        <td><div id="1-1"><img src="img/a.gif" alt="a"></div></td>
-        <td><div id="1-2"><img src="img/a.gif" alt="a"></div></td>
-        <td><div id="1-3"><img src="img/a.gif" alt="a"></div></td>
-        <td><div id="1-4"><img src="img/a.gif" alt="a"></div></td>
-        <td><div id="1-5"><img src="img/a.gif" alt="a"></div></td>
-        <td><div id="1-6"><img src="img/a.gif" alt="a"></div></td>
-        <td><div id="1-7"><img src="img/a.gif" alt="a"></div></td>
-        <td><div id="1-8"><img src="img/a.gif" alt="a"></div></td>
-        <td><div id="1-9"><img src="img/a.gif" alt="a"></div></td>
-        <td><div id="1-10"><img src="img/a.gif" alt="a"></div></td>
-     </tr>
-     <tr>
-        <td><div id="2-1">A</div></td>
-        <td><div id="2-2">A</div></td>
-        <td><div id="2-3">A</div></td>
-        <td><div id="2-4">A</div></td>
-        <td><div id="2-5">A</div></td>
-        <td><div id="2-6">A</div></td>
-        <td><div id="2-7">A</div></td>
-        <td><div id="2-8">A</div></td>
-        <td><div id="2-9">A</div></td>
-        <td><div id="2-10">A</div></td>
-     </tr>
-          <tr>
-        <td><div id="3-1">A</div></td>
-        <td><div id="3-2">A</div></td>
-        <td><div id="3-3">A</div></td>
-        <td><div id="3-4">A</div></td>
-        <td><div id="3-5">A</div></td>
-        <td><div id="3-6">A</div></td>
-        <td><div id="3-7">A</div></td>
-        <td><div id="3-8">A</div></td>
-        <td><div id="3-9">A</div></td>
-        <td><div id="3-10">A</div></td>
-     </tr>
-          <tr>
-        <td><div id="4-1">A</div></td>
-        <td><div id="4-2">A</div></td>
-        <td><div id="4-3">A</div></td>
-        <td><div id="4-4">A</div></td>
-        <td><div id="4-5">A</div></td>
-        <td><div id="4-6">A</div></td>
-        <td><div id="4-7">A</div></td>
-        <td><div id="4-8">A</div></td>
-        <td><div id="4-9">A</div></td>
-        <td><div id="4-10">A</div></td>
-     </tr>
-          <tr>
-        <td><div id="5-1">A</div></td>
-        <td><div id="5-2">A</div></td>
-        <td><div id="5-3">A</div></td>
-        <td><div id="5-4">A</div></td>
-        <td><div id="5-5">A</div></td>
-        <td><div id="5-6">A</div></td>
-        <td><div id="5-7">A</div></td>
-        <td><div id="5-8">A</div></td>
-        <td><div id="5-9">A</div></td>
-        <td><div id="5-10">A</div></td>
-     </tr>
-          <tr>
-        <td><div id="6-1">A</div></td>
-        <td><div id="6-2">A</div></td>
-        <td><div id="6-3">A</div></td>
-        <td><div id="6-4">A</div></td>
-        <td><div id="6-5">A</div></td>
-        <td><div id="6-6">A</div></td>
-        <td><div id="6-7">A</div></td>
-        <td><div id="6-8">A</div></td>
-        <td><div id="6-9">A</div></td>
-        <td><div id="6-10">A</div></td>
-     </tr>
-          <tr>
-        <td><div id="7-1">A</div></td>
-        <td><div id="7-2">A</div></td>
-        <td><div id="7-3">A</div></td>
-        <td><div id="7-4">A</div></td>
-        <td><div id="7-5">A</div></td>
-        <td><div id="7-6">A</div></td>
-        <td><div id="7-7">A</div></td>
-        <td><div id="7-8">A</div></td>
-        <td><div id="7-9">A</div></td>
-        <td><div id="7-10">A</div></td>
-     </tr>
-          <tr>
-        <td><div id="8-1">A</div></td>
-        <td><div id="8-2">A</div></td>
-        <td><div id="8-3">A</div></td>
-        <td><div id="8-4">A</div></td>
-        <td><div id="8-5">A</div></td>
-        <td><div id="8-6">A</div></td>
-        <td><div id="8-7">A</div></td>
-        <td><div id="8-8">A</div></td>
-        <td><div id="8-9">A</div></td>
-        <td><div id="8-10">A</div></td>
-     </tr>
-          <tr>
-        <td><div id="9-1">A</div></td>
-        <td><div id="9-2">A</div></td>
-        <td><div id="9-3">A</div></td>
-        <td><div id="9-4">A</div></td>
-        <td><div id="9-5">A</div></td>
-        <td><div id="9-6">A</div></td>
-        <td><div id="9-7">A</div></td>
-        <td><div id="9-8">A</div></td>
-        <td><div id="9-9">A</div></td>
-        <td><div id="9-10">A</div></td>
-     </tr>
-          <tr>
-        <td><div id="10-1">A</div></td>
-        <td><div id="10-2">A</div></td>
-        <td><div id="10-3">A</div></td>
-        <td><div id="10-4">A</div></td>
-        <td><div id="10-5">A</div></td>
-        <td><div id="10-6">A</div></td>
-        <td><div id="10-7">A</div></td>
-        <td><div id="10-8">A</div></td>
-        <td><div id="10-9">A</div></td>
-        <td><div id="10-10">A</div></td>
-     </tr>
-
-</table>
+</div>
 
 
 <section class="timer">
 
 </section>
 
-<div class="list">
-    <ul>
-    	<li>Business</li>
-        <li>Criminal Justice</li>
-        <li>Hospitality</li>
-        <li>Culinary</li>
-        <li>HVAC</li>
-        <li>Welding</li>
-        <li>Nursing</li>
-        <li>Graphic</li>
-        <li>Multimedia</li>
-        <li>CAD</li>
-        <li>Massage</li>
-        <li>Programming</li>
-        <li>Electronics</li>
-    </ul>
-</div>
 
 
-<section class="links">
-	<a href="#">Start Menu</a>
-    <a href="#">Restart</a>
+
+<section class="links clearfix">
+	<a href="#" class="clearfix">Start Menu</a>
+    <a href="#" class="clearfix">Restart</a>
 </section>
 
 <div class="img"></div>
@@ -248,142 +54,5 @@ main();
 
 
 
-
-
-
-
-
-
-
-<!--<div class="row">
-        <section id="1-1">A</section>
-        <section id="1-2">A</section>
-        <section id="1-3">A</section>
-        <section id="1-4">A</section>
-        <section id="1-5">A</section>
-        <section id="1-6">A</section>
-        <section id="1-7">A</section>
-        <section id="1-8">A</section>
-        <section id="1-9">A</section>
-        <section id="1-10">A</section>
-        </div>
-        
-        <div class="row">
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        </div>
-        
-        <div class="row">
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        </div>
-        
-        <div class="row">
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        </div>
-        
-        <div class="row">
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        </div>
-        
-        <div class="row">
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        </div>
-        
-        <div class="row">
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        </div>
-        
-        <div class="row">
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        </div>
-        
-        <div class="row">
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        </div>
-        
-        <div class="row">
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        <section>A</section>
-        </div>
--->
 </body>
 </html>
