@@ -38,12 +38,13 @@ http://dhart.co/wordpress/2012/05/25/simple-jquery-tutorial-create-a-word-game/
 
 
 
-html{background-color:#000;}
-body{width:90%; margin:0 auto; background-color:#fff; font-size:100%;}
+html{}
+body{width:65%; margin:0 auto; background-color:#fff; font-size:100%;
+-webkit-overflow-scrolling: touch;}
 
 .startmenu{width:100%; background-color:#fff; display:block;}
 
-h1{font-size:250%; padding: 2%; color:#fff;}
+h1{font-size:250%; padding: 2%; color:#000;font-family: 'droid_sansregular'; margin:0; text-align:center;}
 h3{padding: 2%; color:#cc2226; font-family: 'droid_sansregular';}
 
 p{
@@ -51,7 +52,10 @@ p{
 	width:60%; margin:0 auto 2% auto; 
 	background-color:#125DA0;
 	color:#fff; text-align:center;
-	padding:2%; 
+	padding:1%; 
+}
+li{
+	list-style-image:url(../img/list.png);	
 }
 
 
@@ -62,24 +66,8 @@ p{
 	text-align:center; 
 	cursor:pointer;
 }*/
-table{float:left; margin:0 5% 4% 5%; font-family: 'droid_sansregular'; font-size:1.4em;}
-/*td{border:#fff 4px solid;}
-*/
 
-
-.list{width:25%; float:left; text-align:left; background:color;}
-ul{
-	margin:0; list-style-type:circle; 
-	color:#000; 
-	list-style-image:url(../img/list.png);
-	font-family: 'droid_sansregular';
-	font-size:1.1em;
-	/*border:solid 2px #125DA0;*/
-}
-li{padding:1% 0;}
-
-
-.links{clear:both; display:block;  text-align:center; margin: 0 auto 2% auto; width:40%; float:left;}
+.links{ display:block;  text-align:center; margin: 0 auto 2% auto; width:25%; float:left;}
 .links a{ 
 	font-family: 'droid_sansregular';; text-decoration:none;
 	background: #ad1f23; 
@@ -92,11 +80,11 @@ li{padding:1% 0;}
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad1f23', endColorstr='#ad1f23',GradientType=0 ); 
  
 	padding:2% 5%;
-	margin: 0 2%; 
+	margin: 0 5% 3% 0%; 
 	text-transform:uppercase; 
 	color:#fff; 
 	box-shadow:#000  1px 1px 5px;
-	width:36%; float:left;
+	width:85%; float:left;
 }
 .links a:hover{
 	box-shadow:inset #000  1.5px 1.5px 5px;	

@@ -27,10 +27,10 @@
 /* Style for grid cells */
 .rf-tgrid {
     
-    font-family: 'droid_sansregular',sans-serif;
+    font-family:Verdana,Arial,Helvetica,sans-serif;
     font-weight: bold;
     font-size: 1em;
-    margin: 1px;
+    /*margin: 1px;*/
     padding: 10px;
     vertical-align: middle;
     text-align: center;
@@ -56,7 +56,7 @@
 #rf-wordcontainer {
     font-family: Verdana,Arial,Helvetica,sans-serif;
     float :left;
-    padding: 10px 10px 10px 25px; 
+    padding-right:50px;
     cursor: default;
 	margin : 1em 1em 1em 0;
 	
@@ -81,17 +81,17 @@
 }
 
 #rf-tablegrid .rf-highlight {
-    background: red;
+    background: #cc2222;
 }
 
 
 #rf-tablegrid .rf-glowing {
-	background: greenyellow;
+	background: rgba(18,93,160,.3);
         
 }
 
 #rf-tablegrid .rf-selected {
-	background: gold;
+	background: rgba(18,93,160,.5);
 }
 
 /* style for words that didn't make it on the grid */
