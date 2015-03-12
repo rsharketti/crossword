@@ -4,14 +4,19 @@ new Array("business", "criminaljustice", "hospitality", "culinary", "hvac", "wel
 onload = init;
 
 function init(){
-	document.getElementById('1-1').onmousedown = function(){
+	/*document.getElementById('1-1').onmousedown = function(){
 		scrollover('2-2');
-	}
+	}*/
+	
+$(document).bind('touchmove', function(e) {
+    e.preventDefault();
+});
+	
 };
 
 
 
-function scrollover(idnum){
+/*function scrollover(idnum){
 	document.getElementById(idnum).style.backgroundColor = "#f0c";
 };
 
@@ -22,7 +27,7 @@ function makeSelection(){
 		
 }
 
-$("#aDiv").wordsearchwidget({"wordlist" : randi, "gridsize" : 12});
+$("#aDiv").wordsearchwidget({"wordlist" : randi, "gridsize" : 12});*/
 
 
 

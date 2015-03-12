@@ -89,7 +89,7 @@
 
             options : {
                 wordlist : null,
-				gridsize : 10
+				gridsize : 15
             },
 			_mapEventToCell: function(event) {
                 var currentColumn = Math.ceil((event.pageX - this._cellX) / this._cellWidth);
@@ -479,6 +479,10 @@ var Visualizer = {
     },
 
 	
+/**** all words found *****/
+
+
+
 
 
 	clean : function (c) {
