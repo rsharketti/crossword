@@ -198,6 +198,8 @@
 
                     });
                     GameWidgetHelper.signalWordFound(wordIndex);
+				
+					
                 }
 
                 this.hotzone.returnToNormal();
@@ -471,18 +473,19 @@ var Visualizer = {
 	
     signalWordFound : function (w) {
 
-		$(w).css("background",'yellow').animate({"opacity": 'hide'},1000,"linear",
+		$(w).css("background",'white').animate({"opacity": 'hide'},1000,"linear",
 					 function () {
 						 $(w).css("background",'white')
 						 $(w).addClass('rf-foundword').animate({"opacity": 'show'},1000,"linear")
+						 
+						  
 					 });
+					 
+					 
+					
     },
 
 	
-/**** all words found *****/
-
-
-
 
 
 	clean : function (c) {
@@ -1199,6 +1202,8 @@ function WordList() {
         var $n = this.words;
         $(csvwords.split(",")).each(function () {
             $n.push(new Word(this));
+			
+			
         });
         
     }
@@ -1229,7 +1234,15 @@ function WordList() {
             if (this.words[x].checkIfSimilar(word2check)) return x;
         }
         return -1;
+		
+		
     }
+	
+	
+	
+ 
+	
+	
 }
 
 /*
@@ -1303,16 +1316,32 @@ var GameWidgetHelper = {
         words += "</ul></div>";
 
         $(container).append(words);
-
+		
+		
 
     },
 	
 	signalWordFound : function(idx) {
 		var w = $("li").get(idx);
 		Visualizer.signalWordFound(w);
+		
+		
 	}
+	
+	
+	
 	
 }
 
 
 })(jQuery);
+
+
+
+/*if(rf-ptrue lenght == the number of words){
+			if($("li").hasClass('rf-foundword')){
+				console.log("hey");
+			}
+		}*///end for loop
+		
+//$( "#mydiv" ).hasClass( "foo" )

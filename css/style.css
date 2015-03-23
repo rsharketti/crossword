@@ -42,15 +42,14 @@ html{}
 body{width:80%; margin:0 auto; background-color:#fff; font-size:100%;
 -webkit-overflow-scrolling: touch;}
 
-.startmenu{width:100%; background-color:#fff; display:block; text-align:center;}
+.startmenu{width:100%; background-color:#fff; display:block; text-align:center; margin-top:5em;}
 
 h1{font-size:250%; padding: 2%; color:#000;font-family: 'droid_sansregular'; margin:0; text-align:center;
 position:absolute; left:-1000000px;}
 h3{padding: 2%; color:#cc2226; font-family: 'droid_sansregular'; text-align:center; margin:0; font-size:2em;}
 .startmenu img{
 width:100%;
-max-width:715px;
-padding:4em 0;	
+max-width:715px;	
 }
 p{
 	font-family: 'droid_sansregular'; 
@@ -124,7 +123,7 @@ li{
 
 
 .puzzle img{
-		max-width:715px; width:25%; margin: 1% auto; float:left; display:block;
+		max-width:715px; width:25%; margin: 0 auto; float:left; display:block;
 }
 .puzzle{
 		
