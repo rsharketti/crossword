@@ -83,6 +83,7 @@
 //			
 //==============================================================================
 
+var counter = 0;
 (function( $, undefined ) {
     
     $.widget("ryanf.wordsearchwidget", $.ui.mouse, {
@@ -471,14 +472,14 @@ var Visualizer = {
 			.addClass("rf-highlight");
     },
 	
+	
     signalWordFound : function (w) {
 
 		$(w).css("background",'white').animate({"opacity": 'hide'},1000,"linear",
 					 function () {
 						 $(w).css("background",'white')
 						 $(w).addClass('rf-foundword').animate({"opacity": 'show'},1000,"linear")
-						 
-						  
+						
 					 });
 					 
 					 
@@ -574,6 +575,7 @@ function Grid() {
                 var populator2 = eval("new "+ eval("this.directions["+x+"]") +"Populator(row,col,word, this)");
                 var isPlaced2= populator2.populate();
                 if (isPlaced2) break;
+				
                 
             }
             
@@ -1149,6 +1151,7 @@ function Model() {
         for (var i=0;i<this.wordList.size();i++) {
             grid.put( Util.random(this.grid.size()), Util.random(this.grid.size()), this.wordList.get(i) );
         }
+		
 
     }
     
@@ -1188,7 +1191,6 @@ function Word(val) {
         }
         return false;
     }
-    
 
 }
 
@@ -1278,7 +1280,6 @@ var GameWidgetHelper = {
 		model.init(grid, wordList);
 		grid.fillGrid();
 		return model;
-
 	},
 	
     renderGame : function(container, model) {
@@ -1312,21 +1313,34 @@ var GameWidgetHelper = {
         var words = "<div id='rf-wordcontainer'><ul>"
         $(model.wordList.words).each(function () {
             words += '<li class=rf-p'+this.isPlaced+'>'+this.originalValue+'</li>';
+			
+			
         });
         words += "</ul></div>";
 
         $(container).append(words);
 		
+		 
 		
+
+
+
+
 
     },
 	
 	signalWordFound : function(idx) {
 		var w = $("li").get(idx);
 		Visualizer.signalWordFound(w);
+		counter+=1;
 		
+	
+		if($("#rf-wordcontainer li").length == counter)	{
+			window.location = "winner.html";
+		}
 		
 	}
+	
 	
 	
 	
@@ -1345,3 +1359,4 @@ var GameWidgetHelper = {
 		}*///end for loop
 		
 //$( "#mydiv" ).hasClass( "foo" )
+console 
