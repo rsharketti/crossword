@@ -39,21 +39,29 @@ http://dhart.co/wordpress/2012/05/25/simple-jquery-tutorial-create-a-word-game/
 
 
 html{}
-body{width:80%; margin:0 auto; background-color:#fff; font-size:100%;
+body{width:93%; margin:0 auto; background-color:#fff; font-size:100%;
 -webkit-overflow-scrolling: touch;}
 
 .startmenu{width:100%; background-color:#fff; display:block; text-align:center;}
 
 h1{font-size:250%; padding: 2%; color:#000;font-family: 'droid_sansregular'; margin:0; text-align:center;
 position:absolute; left:-1000000px;}
-h3{padding: 2%; color:#cc2226; font-family: 'droid_sansregular'; text-align:center; margin:0; font-size:2em;}
+h3{
+	padding: 1%; color:#125DA0; font-family: 'droid_sansregular'; 
+	text-align:center; margin:0; font-size:2em; display:inline-block; width:33%;
+	border-top:#cc2222 2px solid;
+}
+h6{
+	padding: 1%; color:#000; font-family: 'droid_sansregular'; 
+	text-align:center; margin:0; font-size:.7em; display:inline-block; width:33%;
+}
 .startmenu img{
 width:100%;
 max-width:715px;	
 }
 p{
 	font-family: 'droid_sansregular'; 
-	width:20%; 
+	width:30%; 
 	background-color:#125DA0;
 	color:#fff; text-align:center;
 	padding:1%;  float:left; display:block;
@@ -72,7 +80,7 @@ li{
 	cursor:pointer;
 }*/
 
-.links{ display:block;  text-align:center; margin: 0 auto 2% auto; width:20%; float:left;}
+.links{ display:block;  text-align:center; margin: 0 5% 2% auto; width:20%; float:left;}
 .links a{ 
 	font-family: 'droid_sansregular';; text-decoration:none;
 	background: #ad1f23; 
@@ -123,7 +131,7 @@ li{
 
 
 .puzzle img{
-		max-width:715px; width:25%; margin: 0 auto; float:left; display:block;
+		max-width:715px; width:35%; margin: 0 auto 1% auto; float:left; display:block;
 }
 .puzzle{
 		
@@ -143,6 +151,9 @@ li{
 	padding:0 0 5% 0;	
 }
 
+#winner img{
+	max-width:879px; width:50%;	
+}
 
 /**************CLEAR FIX***************/
 .clearfix:after {
